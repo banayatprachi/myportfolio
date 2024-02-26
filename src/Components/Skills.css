@@ -1,0 +1,150 @@
+/* Styling for the title "Certificates" */
+.Certificates {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px; /* Add padding to the overall container if necessary */
+}
+
+.Certificates .title {
+  text-align: center; /* Center the title text */
+  margin-bottom: 70px;
+}
+
+/* Styling for each card in the carousel */
+.Certificates .carousel .card {
+  width: 100%;
+  box-sizing: border-box;
+  background: rgb(219, 179, 223);
+  border-radius: 6px;
+  padding: 30px 35px;
+  text-align: center;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  animation: fadeIn 0.6s ease-out; /* Add the animation here */
+  margin-bottom: 20px;
+}
+
+.Certificates .carousel .card:hover {
+  background: rgb(102, 5, 110);
+  transform: scale(1.05); /* Add scale effect on hover */
+}
+
+/* Styling for the inner box inside each card */
+.Certificates .carousel .card .box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.Certificates .carousel .card:hover .box {
+  transform: scale(1.05);
+}
+
+/* Styling for text within the card */
+.Certificates .carousel .card .text {
+  font-size: 25px;
+  font-weight: 500;
+  margin: 10px 0 7px 0;
+}
+
+/* Styling for the image within the card */
+.Certificates .carousel .card img {
+  height: 100px;
+  width: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.Certificates .carousel .card:hover img {
+  border-color: #fff;
+}
+
+/* Styling for the owl carousel dots */
+.owl-dots {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.owl-dot {
+  height: 13px;
+  width: 13px;
+  margin: 0 5px;
+  outline: none !important;
+  border-radius: 50%;
+  border: 2px solid rgb(102, 5, 110) !important;
+  transition: all 0.3s ease;
+}
+
+/* Styling for the active dot in the owl carousel */
+.owl-dot.active {
+  width: 35px;
+  border-radius: 14px;
+}
+
+.owl-dot.active,
+.owl-dot:hover {
+  background: rgb(102, 5, 110) !important;
+}
+
+.Certificates .carousel .grid-container {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(150px, 1fr)); /* Default to 1 column */
+  gap: 30px;
+  max-width: 800px; /* Set a maximum width for the grid container if desired */
+  margin: 0 auto; /* Center the grid container horizontally */
+}
+
+/* Responsive Layout */
+@media only screen and (min-width: 600px) {
+  .Certificates .carousel .grid-container {
+    grid-template-columns: repeat(2, minmax(150px, 1fr)); /* 2 columns on screens wider than 600px */
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .Certificates .carousel .grid-container {
+    grid-template-columns: repeat(3, minmax(150px, 1fr)); /* 3 columns on screens wider than 768px */
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .Certificates .carousel .grid-container {
+    grid-template-columns: repeat(4, minmax(150px, 1fr)); /* 4 columns on screens wider than 992px */
+  }
+}
+
+/* Add animation keyframes */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Dark mode styles */
+.Certificates.dark-mode {
+  background-color: black;
+  color: #fff;
+}
+
+.Certificates.dark-mode .carousel .card {
+  background: rgb(138, 75, 175);
+}
+
+.Certificates.dark-mode .carousel .card:hover {
+  background: #1a1a1a;
+}
+
+.Certificates.dark-mode .carousel .card .text {
+  color: #fff;
+}
+
+/* More dark mode styles as needed... */

@@ -1,0 +1,49 @@
+// Home.scss
+
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideInUp {
+    from {
+      transform: translateY(50px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  .home-content {
+    animation: fadeIn 1s ease, slideInUp 1s ease;
+    animation-fill-mode: both;
+  }
+  // Home.scss
+.home {
+  /* Your existing styles... */
+  background-size: cover;
+  background-position: center;
+  height: 100vh; // Use viewport height to take up the full height of the screen
+}
+
+.home-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100%; // Ensure it takes the full height of the parent container
+}
+
+.max-width {
+  max-width: 1200px;
+  margin: auto; // Center the container horizontally
+}
+
+/* Add any additional styling as needed */

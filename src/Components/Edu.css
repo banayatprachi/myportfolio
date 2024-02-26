@@ -1,0 +1,15 @@
+.animate-pop {
+    animation: popAnimation 0.5s ease-in-out;
+  }
+  
+  @keyframes popAnimation {
+    0% {
+      opacity: 0;
+      transform: translateY(50px) scale(0.8);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }
+  
